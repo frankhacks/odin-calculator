@@ -3,7 +3,7 @@ var x = 0;
 var y = 0;
 let operator = 0;
 let ready = "no";
-let chain = 0;
+var chain = 0;
 
 let add = function (a, b) {
     answer = parseFloat(a) + parseFloat(b);
@@ -173,36 +173,69 @@ document.getElementById('decimal').onclick = function() {
 };
 
 document.getElementById('add').onclick = function() {
+    chain++;
+    if (chain > 1){
+        y = inputs.innerHTML;
+        ready = "yes";
+        operate(operator, x, y);
+        x = answer;
+        inputs.innerHTML = answer;
+    } else {
     x = inputs.innerHTML;
     ready = "yes";
     operator = "a";
-
+    }
 }
 
 document.getElementById('subtract').onclick = function() {
+    chain++;
+    if (chain > 1){
+        y = inputs.innerHTML;
+        ready = "yes";
+        operate(operator, x, y);
+        x = answer;
+        inputs.innerHTML = answer;
+    } else {
     x = inputs.innerHTML;
     ready = "yes";
     operator = "s";
-    inputs.innerHTML="0";
+    }
 }
 
 document.getElementById('multiply').onclick = function() {
+    chain++;
+    if (chain > 1){
+        y = inputs.innerHTML;
+        ready = "yes";
+        operate(operator, x, y);
+        x = answer;
+        inputs.innerHTML = answer;
+    } else {
     x = inputs.innerHTML;
     ready = "yes";
     operator = "m";
-    inputs.innerHTML="0";
+    }
 }
 
 document.getElementById('divide').onclick = function() {
+    chain++;
+    if (chain > 1){
+        y = inputs.innerHTML;
+        ready = "yes";
+        operate(operator, x, y);
+        x = answer;
+        inputs.innerHTML = answer;
+    } else {
     x = inputs.innerHTML;
     ready = "yes";
     operator = "d";
-    inputs.innerHTML="0";
+    }
 }
 
 document.getElementById('equal').onclick = function() {
     y = inputs.innerHTML;
     ready = "no";
+    chain = 0;
     operate(operator, x, y);
     inputs.innerHTML = answer;
 }
@@ -211,6 +244,7 @@ document.getElementById('clear').onclick = function() {
     x = 0;
     y = 0;
     ready = "no";
+    chain = 0;
     operator = 0;
     inputs.innerHTML = 0;
 }

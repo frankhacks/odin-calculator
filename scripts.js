@@ -190,3 +190,12 @@ document.getElementById('negate').onclick = function() {
     x = inputs.innerHTML * -1;
     inputs.innerHTML = x;
 }
+
+document.getElementById('percent').onclick = function() {
+    if (x === 0){
+        y = inputs.innerHTML/100;
+        inputs.innerHTML = y;
+    } else {
+    y = x * inputs.innerHTML/100;
+    }
+}

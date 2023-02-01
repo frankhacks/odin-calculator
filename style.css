@@ -1,0 +1,12 @@
+#frame{
+    border = 8px;
+    padding = 3px;
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+}
+
+#grid {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+}   

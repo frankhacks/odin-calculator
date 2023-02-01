@@ -182,3 +182,10 @@ document.getElementById('equal').onclick = function() {
     operate(operator, x, y);
     inputs.innerHTML = answer;
 }
+
+document.getElementById('clear').onclick = function() {
+    x = 0;
+    y = 0;
+    operator = 0;
+    inputs.innerHTML = 0;
+}

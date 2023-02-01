@@ -4,22 +4,22 @@ var y = 0;
 let operator = 0;
 
 let add = function (a, b) {
-    answer = parseInt(a) + parseInt(b);
+    answer = parseFloat(a) + parseFloat(b);
     return answer;
 };
 
 let subtract = function (a, b) {
-    answer = a - b;
+    answer = parseFloat(a) - parseFloat(b);
     return answer;
 };
 
 let multiply = function (a, b) {
-    answer = a * b;
+    answer = parseFloat(a) * parseFloat(b);
     return answer;
 };
 
 let divide = function (a, b) {
-    answer = a / b;
+    answer = parseFloat(a) / parseFloat(b);
     return answer;
 };
 
@@ -153,28 +153,24 @@ document.getElementById('add').onclick = function() {
     x = inputs.innerHTML;
     operator = "a";
     inputs.innerHTML="0";
-    console.log(x);
 }
 
 document.getElementById('subtract').onclick = function() {
     x = inputs.innerHTML;
     operator = "s";
     inputs.innerHTML="0";
-    console.log(x);
 }
 
 document.getElementById('multiply').onclick = function() {
     x = inputs.innerHTML;
     operator = "m";
     inputs.innerHTML="0";
-    console.log(x);
 }
 
 document.getElementById('divide').onclick = function() {
     x = inputs.innerHTML;
     operator = "d";
     inputs.innerHTML="0";
-    console.log(x);
 }
 
 document.getElementById('equal').onclick = function() {

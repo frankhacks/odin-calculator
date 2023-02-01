@@ -2,6 +2,8 @@ var answer = 0;
 var x = 0;
 var y = 0;
 let operator = 0;
+let ready = "no";
+let chain = 0;
 
 let add = function (a, b) {
     answer = parseFloat(a) + parseFloat(b);
@@ -41,8 +43,10 @@ document.getElementById('1').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "1";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "1";
+    } else {
     inputs.innerHTML += "1";
     }
 };
@@ -51,8 +55,10 @@ document.getElementById('2').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "2";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "2";
+    } else {
     inputs.innerHTML += "2";
     }
 };
@@ -61,8 +67,10 @@ document.getElementById('3').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "3";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "3";
+    } else {
     inputs.innerHTML += "3";
     }
 };
@@ -71,8 +79,10 @@ document.getElementById('4').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "4";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "4";
+    } else {
     inputs.innerHTML += "4";
     }
 };
@@ -81,8 +91,10 @@ document.getElementById('5').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "5";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "5";
+    } else {
     inputs.innerHTML += "5";
     }
 };
@@ -91,8 +103,10 @@ document.getElementById('6').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "6";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "6";
+    } else {
     inputs.innerHTML += "6";
     }
 };
@@ -101,8 +115,10 @@ document.getElementById('7').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "7";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "7";
+    } else {
     inputs.innerHTML += "7";
     }
 };
@@ -111,8 +127,10 @@ document.getElementById('8').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "8";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "8";
+    } else {
     inputs.innerHTML += "8";
     }
 };
@@ -121,8 +139,10 @@ document.getElementById('9').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "9";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "9";
+    } else {
     inputs.innerHTML += "9";
     }
 };
@@ -131,8 +151,10 @@ document.getElementById('0').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "0";
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "0";
+    } else {
     inputs.innerHTML += "0";
     }
 };
@@ -141,40 +163,46 @@ document.getElementById('decimal').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += ".";
-    }
-    else if (inputs.innerHTML.includes(".")) {
-    }
-    else {
+    } else if (ready === "yes") {
+        inputs.innerHTML = "";
+        inputs.innerHTML += "1";
+    } else if (inputs.innerHTML.includes(".")) {
+    } else {
     inputs.innerHTML += ".";
     }
 };
 
 document.getElementById('add').onclick = function() {
     x = inputs.innerHTML;
+    ready = "yes";
     operator = "a";
-    inputs.innerHTML="0";
+
 }
 
 document.getElementById('subtract').onclick = function() {
     x = inputs.innerHTML;
+    ready = "yes";
     operator = "s";
     inputs.innerHTML="0";
 }
 
 document.getElementById('multiply').onclick = function() {
     x = inputs.innerHTML;
+    ready = "yes";
     operator = "m";
     inputs.innerHTML="0";
 }
 
 document.getElementById('divide').onclick = function() {
     x = inputs.innerHTML;
+    ready = "yes";
     operator = "d";
     inputs.innerHTML="0";
 }
 
 document.getElementById('equal').onclick = function() {
     y = inputs.innerHTML;
+    ready = "no";
     operate(operator, x, y);
     inputs.innerHTML = answer;
 }
@@ -182,6 +210,7 @@ document.getElementById('equal').onclick = function() {
 document.getElementById('clear').onclick = function() {
     x = 0;
     y = 0;
+    ready = "no";
     operator = 0;
     inputs.innerHTML = 0;
 }

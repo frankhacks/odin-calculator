@@ -185,3 +185,8 @@ document.getElementById('clear').onclick = function() {
     operator = 0;
     inputs.innerHTML = 0;
 }
+
+document.getElementById('negate').onclick = function() {
+    x = inputs.innerHTML * -1;
+    inputs.innerHTML = x;
+}

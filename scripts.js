@@ -67,6 +67,7 @@ document.getElementById('1').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "1";
+        ready ="no";
     } else {
     inputs.innerHTML += "1";
     }
@@ -79,6 +80,7 @@ document.getElementById('2').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "2";
+        ready ="no";
     } else {
     inputs.innerHTML += "2";
     }
@@ -91,6 +93,7 @@ document.getElementById('3').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "3";
+        ready ="no";
     } else {
     inputs.innerHTML += "3";
     }
@@ -103,6 +106,7 @@ document.getElementById('4').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "4";
+        ready ="no";
     } else {
     inputs.innerHTML += "4";
     }
@@ -115,6 +119,7 @@ document.getElementById('5').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "5";
+        ready ="no";
     } else {
     inputs.innerHTML += "5";
     }
@@ -127,6 +132,7 @@ document.getElementById('6').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "6";
+        ready ="no";
     } else {
     inputs.innerHTML += "6";
     }
@@ -139,6 +145,7 @@ document.getElementById('7').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "7";
+        ready ="no";
     } else {
     inputs.innerHTML += "7";
     }
@@ -151,6 +158,7 @@ document.getElementById('8').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "8";
+        ready ="no";
     } else {
     inputs.innerHTML += "8";
     }
@@ -163,6 +171,7 @@ document.getElementById('9').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "9";
+        ready ="no";
     } else {
     inputs.innerHTML += "9";
     }
@@ -175,6 +184,7 @@ document.getElementById('zero').onclick = function() {
     } else if (ready === "yes") {
         inputs.innerHTML = "";
         inputs.innerHTML += "0";
+        ready ="no";
     } else {
     inputs.innerHTML += "0";
     }

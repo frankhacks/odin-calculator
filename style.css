@@ -58,4 +58,6 @@ button {
     border-color: rgba(0, 54, 87, 0.816);
     height: 35px;
     border-bottom-right-radius: 5%;
+    color: black;
+    font-size: 15px;
 }

@@ -4,6 +4,27 @@ var y = 0;
 let operator = 0;
 let ready = "no";
 var chain = 0;
+let symbol = 0;
+
+let setSymbol = function (){
+    if (operator === "a"){
+        symbol = "+";
+    } else if (operator === "s"){
+        symbol = "-";
+    } else if (operator === "m"){
+        symbol = "*";
+    } else if (operator === "d"){
+        symbol = "/";
+    }
+}
+
+// This was going to be the beginning showing the work in the calculator UI
+
+//let formula = document.getElementById('formula');
+
+//let showForumla = function () {
+//    formula.innerHTML = x + " " + symbol + " ";
+//}
 
 let add = function (a, b) {
     answer = parseFloat(a) + parseFloat(b);
@@ -147,7 +168,7 @@ document.getElementById('9').onclick = function() {
     }
 };
 
-document.getElementById('0').onclick = function() {
+document.getElementById('zero').onclick = function() {
     if (parseInt(inputs.innerHTML) === 0){
         inputs.innerHTML = "";
         inputs.innerHTML += "0";
@@ -180,6 +201,7 @@ document.getElementById('add').onclick = function() {
         operate(operator, x, y);
         x = answer;
         inputs.innerHTML = answer;
+        operator = "a";
     } else {
     x = inputs.innerHTML;
     ready = "yes";
@@ -195,6 +217,7 @@ document.getElementById('subtract').onclick = function() {
         operate(operator, x, y);
         x = answer;
         inputs.innerHTML = answer;
+        operator = "s";
     } else {
     x = inputs.innerHTML;
     ready = "yes";
@@ -210,6 +233,7 @@ document.getElementById('multiply').onclick = function() {
         operate(operator, x, y);
         x = answer;
         inputs.innerHTML = answer;
+        operator = "m";
     } else {
     x = inputs.innerHTML;
     ready = "yes";
@@ -225,6 +249,7 @@ document.getElementById('divide').onclick = function() {
         operate(operator, x, y);
         x = answer;
         inputs.innerHTML = answer;
+        operator = "d";
     } else {
     x = inputs.innerHTML;
     ready = "yes";
